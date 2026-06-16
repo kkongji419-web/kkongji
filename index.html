@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소담반상 코너특화교육 안내문</title>
+  <style>
+    :root {
+      --navy: #17324D;
+      --navy-soft: #254B6D;
+      --sky: #DCEEF8;
+      --brown: #7A5738;
+      --gold: #B88A3B;
+      --gold-soft: #F3E7CF;
+      --ivory: #FBF7EF;
+      --text: #1F2933;
+      --muted: #64748B;
+      --line: #D9E2EC;
+      --white: #FFFFFF;
+      --soft-white: #FFFDF9;
+      --shadow: 0 18px 45px rgba(23, 50, 77, 0.11);
+      --shadow-soft: 0 10px 28px rgba(23, 50, 77, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+      line-height: 1.65;
+      word-break: keep-all;
+      background:
+        radial-gradient(circle at top left, rgba(220, 238, 248, 0.75), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(243, 231, 207, 0.75), transparent 34rem),
+        var(--ivory);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .document {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
+    }
+
+    .page {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 34px;
+      padding: 34px;
+      border: 1px solid rgba(217, 226, 236, 0.95);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      break-inside: avoid;
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(90deg, var(--navy), var(--gold), var(--brown));
+    }
+
+    .page-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .page-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 13px;
+      border: 1px solid rgba(184, 138, 59, 0.36);
+      border-radius: 999px;
+      color: var(--brown);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--gold-soft);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 9px;
+      color: var(--gold-soft);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      color: var(--white);
+      font-size: clamp(2.35rem, 5vw, 4.45rem);
+      line-height: 1.08;
+      letter-spacing: -0.075em;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.22;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.16rem;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    .section-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.72fr);
+      gap: 26px;
+      align-items: stretch;
+      padding: 34px;
+      margin-bottom: 28px;
+      border-radius: 24px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(23, 50, 77, 0.98), rgba(37, 75, 109, 0.95)),
+        var(--navy);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -190px;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      border: 74px solid rgba(184, 138, 59, 0.18);
+    }
+
+    .hero-content,
+    .hero-summary {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.06rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 6px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      color: var(--gold-soft);
+      font-size: 0.86rem;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-summary {
+      display: grid;
+      gap: 12px;
+      align-self: stretch;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .summary-item {
+      padding: 14px 16px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .summary-item .label {
+      display: block;
+      margin-bottom: 4px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .summary-item .value {
+      display: block;
+      color: var(--white);
+      font-size: 1.08rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .info-card {
+      position: relative;
+      min-height: 124px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .info-card::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      width: 34px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--gold);
+      opacity: 0.8;
+    }
+
+    .info-card .meta {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.08rem;
+      line-height: 1.42;
+      letter-spacing: -0.025em;
+    }
+
+    .section-block {
+      margin-top: 26px;
+    }
+
+    .section-title-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-title-row h3 {
+      margin: 0;
+    }
+
+    .mini-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+    }
+
+    caption {
+      padding: 14px 18px;
+      color: var(--navy);
+      font-weight: 850;
+      text-align: left;
+      background: var(--soft-white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 850;
+      background: var(--navy);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(220, 238, 248, 0.34);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .overview-table th {
+      width: 180px;
+    }
+
+    .schedule {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 155px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(90deg, rgba(220, 238, 248, 0.42), var(--white));
+    }
+
+    .timeline-time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      border-radius: 14px;
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: var(--gold-soft);
+      border: 1px solid rgba(184, 138, 59, 0.24);
+    }
+
+    .timeline-content strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.04rem;
+      letter-spacing: -0.02em;
+    }
+
+    .timeline-content span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .curriculum-frame {
+      padding: 18px;
+      border: 1px dashed rgba(37, 75, 109, 0.42);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(220, 238, 248, 0.5), rgba(243, 231, 207, 0.42)),
+        var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .curriculum-inner {
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .curriculum-inner img {
+      width: 100%;
+      max-height: 720px;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    .stats {
+      margin: 22px 0 24px;
+    }
+
+    .stat-card {
+      padding: 21px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .stat-card .stat-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .stat-card .stat-value {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .stat-card .number {
+      font-size: 2.25rem;
+      letter-spacing: -0.06em;
+    }
+
+    .stat-card .unit {
+      color: var(--brown);
+      font-size: 1rem;
+      font-weight: 850;
+    }
+
+    .people-table {
+      min-width: 780px;
+    }
+
+    .people-table th:nth-child(1),
+    .people-table td:nth-child(1) {
+      width: 86px;
+      text-align: center;
+    }
+
+    .people-table th:nth-child(3),
+    .people-table td:nth-child(3),
+    .people-table th:nth-child(4),
+    .people-table td:nth-child(4) {
+      width: 120px;
+      text-align: center;
+    }
+
+    .survey-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 18px;
+      align-items: stretch;
+      margin: 22px 0 24px;
+    }
+
+    .notice-card {
+      padding: 22px;
+      border: 1px solid rgba(184, 138, 59, 0.26);
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--gold-soft), rgba(255, 255, 255, 0.82));
+    }
+
+    .notice-card p {
+      margin: 0;
+      color: var(--brown);
+      font-weight: 800;
+    }
+
+    .write-info {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .write-line {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 10px;
+      align-items: end;
+    }
+
+    .write-line span {
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 850;
+    }
+
+    .blank {
+      display: block;
+      height: 30px;
+      border-bottom: 1.5px solid var(--navy-soft);
+    }
+
+    .survey-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    fieldset {
+      min-width: 0;
+      margin: 0;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      break-inside: avoid;
+    }
+
+    legend {
+      padding: 0 8px;
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+
+    .question {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 700;
+      background: var(--soft-white);
+    }
+
+    .option input[type="checkbox"] {
+      flex: 0 0 auto;
+      width: 19px;
+      height: 19px;
+      margin: 0;
+      accent-color: var(--navy);
+    }
+
+    .opinion-box {
+      display: grid;
+      gap: 10px;
+    }
+
+    .opinion-box textarea {
+      width: 100%;
+      min-height: 132px;
+      padding: 14px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--text);
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          var(--white) 0,
+          var(--white) 31px,
+          rgba(217, 226, 236, 0.85) 32px
+        );
+    }
+
+    .line-note {
+      display: none;
+    }
+
+    .thanks {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      color: var(--navy);
+      font-weight: 850;
+      text-align: center;
+      background: rgba(220, 238, 248, 0.66);
+      border: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .document {
+        width: min(100% - 28px, 760px);
+        padding-top: 26px;
+      }
+
+      .page {
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      .page-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 26px;
+      }
+
+      .grid-5,
+      .grid-3,
+      .grid-2,
+      .survey-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-time {
+        justify-content: flex-start;
+        padding: 0 16px;
+      }
+
+      .section-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        word-break: normal;
+      }
+
+      .document {
+        width: calc(100% - 20px);
+        padding: 16px 0 42px;
+      }
+
+      .page {
+        padding: 20px 16px;
+        margin-bottom: 20px;
+      }
+
+      .hero {
+        padding: 22px 18px;
+        border-radius: 20px;
+      }
+
+      .hero-summary {
+        padding: 14px;
+      }
+
+      .info-card,
+      .stat-card,
+      fieldset {
+        padding: 17px;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td {
+        padding: 12px 13px;
+      }
+
+      .curriculum-inner {
+        min-height: 260px;
+        padding: 10px;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        width: 210mm;
+        min-height: 297mm;
+        background: #FFFFFF !important;
+      }
+
+      body {
+        color: #111827;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+
+      .document {
+        width: 100%;
+        padding: 0;
+      }
+
+      .page {
+        margin: 0;
+        padding: 10mm;
+        border: 1px solid #D9E2EC;
+        border-radius: 0;
+        box-shadow: none;
+        background: #FFFFFF;
+        break-after: page;
+        page-break-after: always;
+        overflow: visible;
+      }
+
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      .page::before {
+        height: 4px;
+      }
+
+      .page-header {
+        margin-bottom: 14px;
+      }
+
+      .page-label,
+      .badge {
+        border-color: #B88A3B;
+        background: #F3E7CF;
+        color: #7A5738;
+      }
+
+      .hero {
+        padding: 10mm;
+        margin-bottom: 7mm;
+        border-radius: 0;
+        box-shadow: none;
+        grid-template-columns: 1.25fr 0.75fr;
+        background: #17324D !important;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      h1 {
+        font-size: 27pt;
+      }
+
+      h2 {
+        font-size: 20pt;
+      }
+
+      h3 {
+        font-size: 13pt;
+      }
+
+      .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-2,
+      .survey-intro {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .card,
+      .table-wrap,
+      .curriculum-frame,
+      fieldset,
+      .write-info {
+        box-shadow: none;
+      }
+
+      .info-card {
+        min-height: 84px;
+        padding: 12px;
+      }
+
+      .info-card::after {
+        width: 24px;
+        height: 3px;
+      }
+
+      .section-block {
+        margin-top: 6mm;
+      }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      table {
+        min-width: 0;
+        font-size: 9.5pt;
+      }
+
+      th {
+        background: #17324D !important;
+        color: #FFFFFF !important;
+      }
+
+      th,
+      td {
+        padding: 7px 9px;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #F5FAFD !important;
+      }
+
+      .timeline-item,
+      .curriculum-frame,
+      .notice-card {
+        background: #FFFFFF !important;
+      }
+
+      .timeline-item {
+        padding: 10px;
+        break-inside: avoid;
+      }
+
+      .timeline-time {
+        background: #F3E7CF !important;
+      }
+
+      .curriculum-inner {
+        min-height: 160mm;
+        padding: 8px;
+      }
+
+      .stats {
+        margin: 6mm 0;
+      }
+
+      .stat-card {
+        padding: 12px;
+      }
+
+      .stat-card .number {
+        font-size: 22pt;
+      }
+
+      fieldset {
+        padding: 10px 12px;
+        margin-bottom: 7px;
+        break-inside: avoid;
+      }
+
+      .options {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+      }
+
+      .option {
+        min-height: 34px;
+        padding: 5px 7px;
+        font-size: 9pt;
+      }
+
+      .option input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+      }
+
+      .opinion-box textarea {
+        display: none;
+      }
+
+      .line-note {
+        display: block;
+       : repeat(5, 1fr);
+        gap: 6px;
+      }
+
+      .option {
+        min-height: 34px;
+        padding: 5px 7px;
+        font-size: 9pt;
+      }
+
+      .option input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+      }
+
+      .opinion-box textarea {
+        display: none;
+      }
+
+      .line-note {
+        display: block;
+        min-height: 34mm;
+        background:
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 8mm,
+            #9AA8B6 8.2mm
+          );
+      }
+
+      .thanks {
+        padding: 10px;
+        background: #F5FAFD !important;
+      }
+
+      .hero-copy,
+      .section-description,
+      .mini-note {
+        color: #334155 !important;
+      }
+
+      .hero .hero-copy,
+      .hero .eyebrow,
+      .hero .summary-item .label,
+      .hero .summary-item .value,
+      .hero h1 {
+        color: #FFFFFF !important;
+      }
+
+      .hero .eyebrow {
+        color: #F3E7CF !important;
+      }
+
+      .hero-summary,
+      .summary-item {
+        border-color: rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.08) !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="document">
+    <section class="page" aria-labelledby="page1-title">
+      <header class="page-header">
+        <div>
+          <h2 id="page1-title">커리큘럼 및 교육 개요</h2>
+          <p class="section-description">교육 핵심 정보와 운영 일정, 커리큘럼을 한눈에 확인할 수 있습니다.</p>
+        </div>
+        <span class="page-label">1Page</span>
+      </header>
+
+      <article class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Corporate Training Guide</p>
+          <h1 id="hero-title">소담반상<br>코너특화교육</h1>
+          <p class="hero-copy">
+            소담반상 코너 운영 이해도와 현장 적용 역량을 높이기 위한 기업형 교육 안내문입니다.
+            정갈한 서비스와 안정적인 점포 운영을 위한 핵심 내용을 중심으로 구성했습니다.
+          </p>
+          <div class="hero-badges" aria-label="교육 키워드">
+            <span class="badge">Corner Specialized Training</span>
+            <span class="badge">LOTTE GRS Academy</span>
+            <span class="badge">2026.06.25</span>
+          </div>
+        </div>
+
+        <aside class="hero-summary" aria-label="교육 핵심 정보">
+          <div class="summary-item">
+            <span class="label">교육명</span>
+            <span class="value">소담반상 코너특화교육</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">일시</span>
+            <span class="value">2026.06.25</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">장소</span>
+            <span class="value">LOTTE GRS Academy</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">시간</span>
+            <span class="value">10:00 ~ 18:00</span>
+          </div>
+        </aside>
+      </article>
+
+      <section class="section-block" aria-labelledby="overview-card-title">
+        <div class="section-title-row">
+          <div>
+            <h3 id="overview-card-title">교육 핵심 정보</h3>
+            <p class="mini-note">교육 대상자가 반드시 확인해야 할 기본 정보를 카드형으로 정리했습니다.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-5">
+          <article class="card info-card">
+            <span class="meta">Program</span>
+            <strong>소담반상 코너특화교육</strong>
+          </article>
+          <article class="card info-card">
+            <span class="meta">Date</span>
+            <strong>2026.06.25</strong>
+          </article>
+          <article class="card info-card">
+            <span class="meta">Venue</span>
+            <strong>LOTTE GRS Academy</strong>
+          </article>
+          <article class="card info-card">
+            <span class="meta">Time</span>
+            <strong>10:00 ~ 18:00</strong>
+          </article>
+          <article class="card info-card">
+            <span class="meta">Curriculum</span>
+            <strong>이미지 삽입, png 파일</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="overview-table-title">
+        <div class="table-wrap">
+          <table class="overview-table">
+            <caption id="overview-table-title">교육 개요 표</caption>
+            <thead>
+              <tr>
+                <th scope="col">항목</th>
+                <th scope="col">내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">교육명</th>
+                <td>소담반상 코너특화교육</td>
+              </tr>
+              <tr>
+                <th scope="row">일시</th>
+                <td>2026.06.25</td>
+              </tr>
+              <tr>
+                <th scope="row">장소</th>
+                <td>LOTTE GRS Academy</td>
+              </tr>
+              <tr>
+                <th scope="row">시간</th>
+                <td>10:00 ~ 18:00</td>
+              </tr>
+              <tr>
+                <th scope="row">커리큘럼</th>
+                <td>이미지 삽입, png 파일</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="schedule-title">
+        <div class="section-title-row">
+          <div>
+            <h3 id="schedule-title">교육 일정</h3>
+            <p class="mini-note">10:00부터 18:00까지 진행되는 교육 흐름입니다.</p>
+          </div>
+        </div>
+
+        <div class="schedule">
+          <article class="timeline-item">
+            <div class="timeline-time">10:00 ~ 10:30</div>
+            <div class="timeline-content">
+              <strong>오리엔테이션 및 교육 목표 공유</strong>
+              <span>교육 목적, 운영 방향, 소담반상 브랜드 콘셉트 이해</span>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-time">10:30 ~ 12:00</div>
+            <div class="timeline-content">
+              <strong>소담반상 코너 운영 기본 이해</strong>
+              <span>메뉴 구성, 코너 운영 기준, 고객 응대 기본 원칙 학습</span>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-time">13:00 ~ 15:00</div>
+            <div class="timeline-content">
+              <strong>현장 적용 중심 실무 교육</strong>
+              <span>점포 운영 프로세스, 품질 관리, 상황별 대응 포인트 확인</span>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-time">15:00 ~ 17:20</div>
+            <div class="timeline-content">
+              <strong>커리큘럼 기반 심화 교육</strong>
+              <span>코너 특화 운영 역량 강화를 위한 주요 커리큘럼 진행</span>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-time">17:20 ~ 18:00</div>
+            <div class="timeline-content">
+              <strong>정리 및 만족도 설문</strong>
+              <span>핵심 내용 리뷰, 질의응답, 교육 만족도 설문 작성</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="curriculum-title">
+        <div class="section-title-row">
+          <div>
+            <h3 id="curriculum-title">커리큘럼 이미지</h3>
+            <p class="mini-note">동일 폴더에 curriculum.png 파일을 배치하면 아래 영역에 표시됩니다.</p>
+          </div>
+        </div>
+
+        <figure class="curriculum-frame">
+          <div class="curriculum-inner">
+            <img src="curriculum.png" alt="소담반상 코너특화교육 커리큘럼">
+          </div>
+        </figure>
+      </section>
+    </section>
+
+    <section class="page" aria-labelledby="page2-title">
+      <header class="page-header">
+        <div>
+          <h2 id="page2-title">교육 대상자 명단</h2>
+          <p class="section-description">소담반상 코너특화교육 참석 대상자 현황입니다.</p>
+        </div>
+        <span class="page-label">2Page</span>
+      </header>
+
+      <section class="grid grid-3 stats" aria-label="교육 대상자 요약">
+        <article class="card stat-card">
+          <span class="stat-label">총 인원</span>
+          <strong class="stat-value"><span class="number">13</span><span class="unit">명</span></strong>
+        </article>
+        <article class="card stat-card">
+          <span class="stat-label">남성 인원</span>
+          <strong class="stat-value"><span class="number">4</span><span class="unit">명</span></strong>
+        </article>
+        <article class="card stat-card">
+          <span class="stat-label">여성 인원</span>
+          <strong class="stat-value"><span class="number">9</span><span class="unit">명</span></strong>
+        </article>
+      </section>
+
+      <section aria-labelledby="people-table-title">
+        <div class="table-wrap">
+          <table class="people-table">
+            <caption id="people-table-title">교육 대상자 명단</caption>
+            <thead>
+              <tr>
+                <th scope="col">no.</th>
+                <th scope="col">소속(점포명)</th>
+                <th scope="col">이름</th>
+                <th scope="col">성별</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>하이네켄 인천공항 T2 A/S점</td>
+                <td>전지웅</td>
+                <td>남</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>복주걱 롯데몰 광명점</td>
+                <td>박성연</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>플레이팅 인천공항 T1점</td>
+                <td>구서영</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>플레이팅 인천공항 T1점</td>
+                <td>염지혜</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>플레이팅 인천공항 T2서편점</td>
+                <td>김다민</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>플레이팅 강동경희대병원점</td>
+                <td>배서연</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>플레이팅 강동경희대병원점</td>
+                <td>배장원</td>
+                <td>남</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>플레이팅 롯데월드부산점</td>
+                <td>김민서</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>하이네켄 김해공항 국내선2F점</td>
+                <td>강지우</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>하아네켄 김해공항 국제선점</td>
+                <td>윤지수</td>
+                <td>여</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>하이네켄 김해공항 국내선2F점</td>
+                <td>임대호</td>
+                <td>남</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>플레이팅 김포공항점</td>
+                <td>이재민</td>
+                <td>남</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>플레이팅 제주대병원</td>
+                <td>정혜미</td>
+                <td>여</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" aria-labelledby="page3-title">
+      <header class="page-header">
+        <div>
+          <h2 id="page3-title">소담반상 코너특화교육 만족도 설문</h2>
+          <p class="section-description">교육 품질 향상과 현장 적용도 강화를 위한 설문입니다.</p>
+        </div>
+        <span class="page-label">3Page</span>
+      </header>
+
+      <section class="survey-intro" aria-label="설문 안내 및 작성자 정보">
+        <article class="notice-card">
+          <h3>설문 안내</h3>
+          <p>교육 품질 향상과 현장 적용도 강화를 위해 설문에 응답해 주세요.</p>
+        </article>
+
+        <aside class="write-info" aria-label="작성자 정보">
+          <div class="write-line">
+            <span>소속</span>
+            <i class="blank" aria-hidden="true"></i>
+          </div>
+          <div class="write-line">
+            <span>이름</span>
+            <i class="blank" aria-hidden="true"></i>
+          </div>
+          <div class="write-line">
+            <span>작성일</span>
+            <i class="blank" aria-hidden="true"></i>
+          </div>
+        </aside>
+      </section>
+
+      <form class="survey-form" action="#" method="post">
+        <fieldset>
+          <legend>문항 1</legend>
+          <span class="question">교육 내용은 소담반상 코너 운영 이해에 도움이 되었습니까?</span>
+          <div class="options">
+            <label class="option" for="q1-1"><input type="checkbox" id="q1-1" name="q1" value="매우 만족">매우 만족</label>
+            <label class="option" for="q1-2"><input type="checkbox" id="q1-2" name="q1" value="만족">만족</label>
+            <label class="option" for="q1-3"><input type="checkbox" id="q1-3" name="q1" value="보통">보통</label>
+            <label class="option" for="q1-4"><input type="checkbox" id="q1-4" name="q1" value="미흡">미흡</label>
+            <label class="option" for="q1-5"><input type="checkbox" id="q1-5" name="q1" value="매우 미흡">매우 미흡</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>문항 2</legend>
+          <span class="question">교육에서 다룬 내용은 실제 점포 운영에 적용 가능하다고 느꼈습니까?</span>
+          <div class="options">
+            <label class="option" for="q2-1"><input type="checkbox" id="q2-1" name="q2" value="매우 그렇다">매우 그렇다</label>
+            <label class="option" for="q2-2"><input type="checkbox" id="q2-2" name="q2" value="그렇다">그렇다</label>
+            <label class="option" for="q2-3"><input type="checkbox" id="q2-3" name="q2" value="보통">보통</label>
+            <label class="option" for="q2-4"><input type="checkbox" id="q2-4" name="q2" value="그렇지 않다">그렇지 않다</label>
+            <label class="option" for="q2-5"><input type="checkbox" id="q2-5" name="q2" value="전혀 그렇지 않다">전혀 그렇지 않다</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>문항 3</legend>
+          <span class="question">강사의 설명과 전달 방식은 이해하기 쉬웠습니까?</span>
+          <div class="options">
+            <label class="option" for="q3-1"><input type="checkbox" id="q3-1" name="q3" value="매우 만족">매우 만족</label>
+            <label class="option" for="q3-2"><input type="checkbox" id="q3-2" name="q3" value="만족">만족</label>
+            <label class="option" for="q3-3"><input type="checkbox" id="q3-3" name="q3" value="보통">보통</label>
+            <label class="option" for="q3-4"><input type="checkbox" id="q3-4" name="q3" value="미흡">미흡</label>
+            <label class="option" for="q3-5"><input type="checkbox" id="q3-5" name="q3" value="매우 미흡">매우 미흡</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>문항 4</legend>
+          <span class="question">교육 시간과 구성은 적절했습니까?</span>
+          <div class="options">
+            <label class="option" for="q4-1"><input type="checkbox" id="q4-1" name="q4" value="매우 적절">매우 적절</label>
+            <label class="option" for="q4-2"><input type="checkbox" id="q4-2" name="q4" value="적절">적절</label>
+            <label class="option" for="q4-3"><input type="checkbox" id="q4-3" name="q4" value="보통">보통</label>
+            <label class="option" for="q4-4"><input type="checkbox" id="q4-4" name="q4" value="부족">부족</label>
+            <label class="option" for="q4-5"><input type="checkbox" id="q4-5" name="q4" value="매우 부족">매우 부족</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>문항 5</legend>
+          <span class="question">교육 장소와 환경에 만족하셨습니까?</span>
+          <div class="options">
+            <label class="option" for="q5-1"><input type="checkbox" id="q5-1" name="q5" value="매우 만족">매우 만족</label>
+            <label class="option" for="q5-2"><input type="checkbox" id="q5-2" name="q5" value="만족">만족</label>
+            <label class="option" for="q5-3"><input type="checkbox" id="q5-3" name="q5" value="보통">보통</label>
+            <label class="option" for="q5-4"><input type="checkbox" id="q5-4" name="q5" value="미흡">미흡</label>
+            <label class="option" for="q5-5"><input type="checkbox" id="q5-5" name="q5" value="매우 미흡">매우 미흡</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>문항 6</legend>
+          <label class="question" for="q6-opinion">향후 추가로 배우고 싶은 내용이나 개선 의견을 작성해 주세요.</label>
+          <div class="opinion-box">
+            <textarea id="q6-opinion" name="q6-opinion" aria-label="향후 추가로 배우고 싶은 내용이나 개선 의견 작성란"></textarea>
+            <div class="line-note" aria-hidden="true"></div>
+          </div>
+        </fieldset>
+
+        <p class="thanks">소중한 의견은 향후 교육 품질 개선과 현장 적용도 강화를 위해 활용하겠습니다. 감사합니다.</p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
